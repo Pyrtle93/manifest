@@ -1197,4 +1197,5 @@
   <include name="snippets/arrow.xml" />
   <include name="snippets/blaze.xml" />
   <include name="snippets/lineage.xml" />
+  <include name="snippets/pixel.xml" />
 </manifest>

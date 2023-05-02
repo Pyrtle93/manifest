@@ -16,11 +16,17 @@
    <remote  name="kdragon"
            fetch="https://github.com/kdrag0n/"
            revision="master" />
+
+   <remote name="xAndroidGangx"
+           fetch="https://github.com/xAndroidGangx" />
 	
   <!-- GitLab -->
    <remote  name="gitlab"
             fetch="https://gitlab.com/projectblaze"
-	    revision="refs/heads/13" />
+	        revision="refs/heads/13" />
+
+   <remote  name="gitlab-2"
+            fetch="https://gitlab.com/Pyrtle93" />
 
   <project path="android" name="manifest" remote="blaze" />
   <project path="art" name="art" groups="pdk" remote="blaze"/>
@@ -47,6 +53,14 @@
   <project path="device/qcom/sepolicy_vndr-legacy-um" name="device_qcom_sepolicy_vndr-legacy-um" remote="blaze" />
   <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" remote="blaze" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="blaze" />
+  <project path="device/google/gs101" name="device_google_gs101" remote="xAndroidGangx" revision="pb" />
+  <project path="device/google/gs101-sepolicy" name="device_google_gs101-sepolicy" remote="xAndroidGangx" revision="pb" />
+  <project path="device/google/gs201" name="device_google_gs201" remote="xAndroidGangx" revision="pb" />
+  <project path="device/google/gs201-sepolicy" name="device_google_gs201-sepolicy" remote="xAndroidGangx" revision="pb" />
+  <project path="device/google/gs-common" name="device_google_gs-common" remote="xAndroidGangx" revision="pb" />
+  <project path="device/google/pantah" name="device_google_pantah" remote="xAndroidGangx" revision="pb" />
+  <project path="device/google/pantah-sepolicy" name="device_google_pantah-sepolicy" remote="xAndroidGangx" revision="a13" />
+  <project path="device/google/pantah-kernel" name="pantah_kernel" remote="gitlab-2" revision="13" />
 
   <!-- external repos -->
   <project path="external/perfetto" name="external_perfetto" groups="pdk" remote="blaze" />
@@ -75,6 +89,10 @@
   <project path="hardware/libhardware" name="hardware_libhardware" remote="blaze" />
   <project path="hardware/blaze/interfaces" name="hardware_blaze_interfaces" group="pkg" remote="blaze" />
   <project path="hardware/qcom-caf/wlan" name="hardware_qcom_wlan" groups="qcom_wlan" remote="blaze" />
+  <project path="platform/hardware/google/pixel" name="hardware_google_pixel" remote="xAndroidGangx" revision="13" />
+
+  <!-- kernel repos -->
+  <project path="kernel/google/pantah/cheetah" name="Kirisakura_Pantah" remote="xAndroidGangx" revision="13" />
    
   <!-- packages repos -->
   <project path="packages/apps/Aperture" name="packages_apps_Aperture" remote="blaze" />
@@ -121,7 +139,10 @@
   <project path="vendor/qcom/opensource/commonsys-intf/display" name="vendor_qcom_opensource_commonsys-intf_display" remote="blaze" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" remote="blaze" />
   <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" remote="blaze" />
-	
+  <project path="proprietary/vendor/google_devices/cheetah" name="vendor_google_devices_cheetah" remote="gitlab-2" revision="13" />
+  <project path="proprietary/vendor/google_devices/panther" name="vendor_google_devices_panther" remote="gitlab-2" revision="13" />
+  <project path="vendor/google/interfaces" name="vendor_google_interfaces" remote="xAndroidGangx" revision="a13" />
+
   <!-- Custom Clangs -->
   <project path="prebuilts/clang/host/linux-x86/clang-proton" name="proton-clang" remote="kdragon" clone-depth="1" />
 </manifest>
